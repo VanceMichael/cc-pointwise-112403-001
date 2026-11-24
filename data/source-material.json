@@ -1,0 +1,29 @@
+{
+  "name": "内需指标发布版次与分项解释采集台",
+  "material_nature": "本地合成演练资料",
+  "description": "仅供本地开发和回归，记录不代表真实机构、交易或观测。",
+  "records": {
+    "series": "macro_indicators",
+    "period": "2026-Q3",
+    "measures": [
+      "growth_contribution",
+      "goods_retail_yoy",
+      "service_retail_yoy",
+      "ip_investment_yoy",
+      "high_tech_investment_yoy"
+    ],
+    "releases": [
+      {
+        "id": "release-a",
+        "revision": 1,
+        "status": "published"
+      },
+      {
+        "id": "release-a",
+        "revision": 2,
+        "status": "corrected"
+      }
+    ],
+    "notes": "合成的公告目录与表格片段，仅用于练习来源和统计期关联。"
+  }
+}
