@@ -1,29 +1,106 @@
 {
-  "name": "内需指标发布版次与分项解释采集台",
+  "name": "内需统计公告的采集与简报口径核对",
   "material_nature": "本地合成演练资料",
-  "description": "仅供本地开发和回归，记录不代表真实机构、交易或观测。",
-  "records": {
-    "series": "macro_indicators",
-    "period": "2026-Q3",
-    "measures": [
-      "growth_contribution",
-      "goods_retail_yoy",
-      "service_retail_yoy",
-      "ip_investment_yoy",
-      "high_tech_investment_yoy"
-    ],
-    "releases": [
-      {
-        "id": "release-a",
-        "revision": 1,
-        "status": "published"
-      },
-      {
-        "id": "release-a",
-        "revision": 2,
-        "status": "corrected"
-      }
-    ],
-    "notes": "合成的公告目录与表格片段，仅用于练习来源和统计期关联。"
-  }
+  "description": "资料中的机构、项目、交易、合同和回执均为虚构，仅用于本地开发与回归。",
+  "feeds": [
+    {
+      "id": "release",
+      "label": "统计发布页",
+      "records": [
+        {
+          "release": "R-2026-11-24",
+          "publisher": "国家统计发布",
+          "issued_at": "2026-11-24T09:00+08:00",
+          "revision": "original",
+          "url": "/release/r1"
+        },
+        {
+          "release": "R-2026-11-24-copy",
+          "publisher": "区域转载页",
+          "issued_at": "2026-11-24T10:20+08:00",
+          "revision": "转载首发内容",
+          "url": "/copy/r1"
+        },
+        {
+          "release": "R-2026-11-24-correction",
+          "publisher": "国家统计发布",
+          "issued_at": "2026-11-25T08:30+08:00",
+          "revision": "更正服务零售值",
+          "url": "/release/r2"
+        }
+      ]
+    },
+    {
+      "id": "measures",
+      "label": "指标与脚注表",
+      "records": [
+        {
+          "measure": "内需对增长贡献率",
+          "value": "74.8",
+          "unit": "%",
+          "period": "2026-Q1..Q3",
+          "footnote": "季度累计",
+          "release": "R-2026-11-24"
+        },
+        {
+          "measure": "商品零售额同比",
+          "value": "2.5",
+          "unit": "%",
+          "period": "2026-01..10",
+          "footnote": "商品口径",
+          "release": "R-2026-11-24"
+        },
+        {
+          "measure": "服务零售额同比",
+          "value": "4.9",
+          "unit": "%",
+          "period": "2026-01..10",
+          "footnote": "服务口径",
+          "release": "R-2026-11-24"
+        },
+        {
+          "measure": "服务零售额同比",
+          "value": "4.8",
+          "unit": "%",
+          "period": "2026-01..10",
+          "footnote": "正式更正",
+          "release": "R-2026-11-24-correction"
+        },
+        {
+          "measure": "知识产权产品投资同比",
+          "value": "9.2",
+          "unit": "%",
+          "period": "2026-01..10",
+          "footnote": "占全部投资16.2%"
+        },
+        {
+          "measure": "高技术产业投资同比",
+          "value": "4.0",
+          "unit": "%",
+          "period": "2026-01..10",
+          "footnote": "制造业3.0%，服务业5.9%"
+        }
+      ]
+    },
+    {
+      "id": "brief",
+      "label": "简报引用登记",
+      "records": [
+        {
+          "brief": "内需周报-47",
+          "measure": "服务零售额同比",
+          "release": "R-2026-11-24",
+          "state": "confirmed",
+          "quoted_value": "4.9"
+        },
+        {
+          "brief": "内需周报-47",
+          "measure": "高技术产业投资同比",
+          "release": "R-2026-11-24",
+          "state": "confirmed",
+          "quoted_value": "4.0"
+        }
+      ]
+    }
+  ]
 }
